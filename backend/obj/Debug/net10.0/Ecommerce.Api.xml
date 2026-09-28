@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecommerce.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Ecommerce.Api.Controllers.LooksController.GetAll">
+            <summary>Liste des photos avec leurs articles cliquables.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.LooksController.GetById(System.Int32)">
+            <summary>Une photo avec ses articles, leurs prix finaux et leurs variantes.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.LooksController.Create(Ecommerce.Api.DTOs.CreateLookRequest)">
+            <summary>Créer une photo avec ses points cliquables (X et Y en %).</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.LooksController.AddItem(System.Int32,Ecommerce.Api.DTOs.LookItemRequest)">
+            <summary>Ajouter un article cliquable sur une photo existante.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.LooksController.RemoveItem(System.Int32,System.Int32)">
+            <summary>Retirer un article d'une photo.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.LooksController.Delete(System.Int32)">
+            <summary>Supprimer une photo (les produits ne sont pas supprimés).</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.ProductsController.GetAll">
+            <summary>Liste des produits avec variantes, stock et prix final.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.ProductsController.GetById(System.Int32)">
+            <summary>Détail d'un produit.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.ProductsController.Create(Ecommerce.Api.DTOs.CreateProductRequest)">
+            <summary>Créer un produit avec ses photos et ses variantes (taille + couleur + stock).</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.ProductsController.Update(System.Int32,Ecommerce.Api.DTOs.UpdateProductRequest)">
+            <summary>Modifier les informations d'un produit (les variantes et le stock ne sont pas touchés).</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.ProductsController.Delete(System.Int32)">
+            <summary>Supprimer un produit (refusé s'il est utilisé dans une photo).</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.ProductsController.AddVariant(System.Int32,Ecommerce.Api.DTOs.CreateVariantRequest)">
+            <summary>Ajouter une variante (taille + couleur) à un produit.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.VariantsController.GetStock(System.Int32)">
+            <summary>Stock actuel d'une variante.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.VariantsController.AddStock(System.Int32,Ecommerce.Api.DTOs.StockChangeRequest)">
+            <summary>Ajouter du stock (achat, réapprovisionnement, retour...).</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.VariantsController.RemoveStock(System.Int32,Ecommerce.Api.DTOs.StockChangeRequest)">
+            <summary>Retirer du stock (correction, casse...). Refusé si le stock est insuffisant.</summary>
+        </member>
+        <member name="M:Ecommerce.Api.Controllers.VariantsController.GetHistory(System.Int32)">
+            <summary>Historique des mouvements de stock d'une variante.</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.LookItemRequest.X">
+            <summary>Position horizontale en % (0 à 100).</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.LookItemRequest.Y">
+            <summary>Position verticale en % (0 à 100).</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.CreateVariantRequest.Size">
+            <summary>Taille en lettres : S, M, L, XL...</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.CreateVariantRequest.Quantity">
+            <summary>Stock initial.</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.UpdateProductRequest.Price">
+            <summary>Prix HT de base.</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.UpdateProductRequest.DiscountPercent">
+            <summary>Remise en % (0 à 100).</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.UpdateProductRequest.TaxPercent">
+            <summary>Taxe en % (0 à 100).</summary>
+        </member>
+        <member name="P:Ecommerce.Api.DTOs.StockChangeRequest.Reason">
+            <summary>Achat, Vente, Retour, Correction...</summary>
+        </member>
+        <member name="T:Ecommerce.Api.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:Ecommerce.Api.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Ecommerce.Api.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Ecommerce.Api.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>
