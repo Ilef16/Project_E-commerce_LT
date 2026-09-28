@@ -10,4 +10,4 @@ public static class Pricing
         var afterDiscount = p.Price * (1 - p.DiscountPercent / 100m);
         return Math.Round(afterDiscount * (1 + p.TaxPercent / 100m), 2, MidpointRounding.AwayFromZero);
     }
-} 
+}  
